@@ -1,0 +1,13 @@
+name: unittest
+on:
+  push:
+    branches:
+      - develop
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+      - name: ProjectCheckout
+        uses: actions/checkout@develop
+      - name: build
+        run: mkdir build && cd build && cmake .. && make
