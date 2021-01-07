@@ -12,4 +12,8 @@ jobs:
       with:
         ref: develop
     - name: build
-      run: mkdir build && cd build && cmake .. && make
+      run: 
+        mkdir build && cd build
+        cmake .. 
+        make
+        ./Testsdtp
