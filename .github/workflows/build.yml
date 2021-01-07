@@ -8,6 +8,8 @@ jobs:
     runs-on: self-hosted
     steps:
     - name: ProjectCheckout
-      uses: actions/checkout@develop
+      uses: actions/checkout@v2
+      with:
+        ref: develop
     - name: build
       run: mkdir build && cd build && cmake .. && make
